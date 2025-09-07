@@ -1,4 +1,4 @@
-package com.aurora.backend.mapper;
+package com.aurora.backend.repository;
 
 public class HelloRepository {
 }

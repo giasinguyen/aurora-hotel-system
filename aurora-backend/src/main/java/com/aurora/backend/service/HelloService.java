@@ -1,4 +1,4 @@
-package com.aurora.backend.service.impl;
+package com.aurora.backend.service;
 
 public class HelloService {
 }
