@@ -1,23 +1,17 @@
-package com.aurora.backend.dto.response;
+package com.aurora.backend.dto.request;
 
-import com.aurora.backend.entity.Role;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
-import java.util.Set;
 
-@Getter
-@Setter
-@Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserResponse {
-    String id;
-    String username;
+public class UserUpdateRequest {
     String firstName;
     String lastName;
     LocalDate dob;
-    Set<Role> roles;
 }

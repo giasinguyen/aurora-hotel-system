@@ -15,6 +15,13 @@ public enum ErrorCode {
     UNAUTHORIZED(1005, "You do not have permission", HttpStatus.FORBIDDEN),
     USERNAME_INVALID(1006, "Username must be at least 4 characters", HttpStatus.BAD_REQUEST),
     INVALID_PASSWORD(1007, "Password must be at least 6 characters", HttpStatus.BAD_REQUEST),
+    USER_UPDATE_FAILED(1008, "Failed to update user", HttpStatus.BAD_REQUEST),
+    USER_DELETE_FAILED(1009, "Failed to delete user", HttpStatus.BAD_REQUEST),
+    USERNAME_REQUIRED(1010, "Username is required", HttpStatus.BAD_REQUEST),
+    PASSWORD_REQUIRED(1011, "Password is required", HttpStatus.BAD_REQUEST),
+    FIRSTNAME_REQUIRED(1012, "First name is required", HttpStatus.BAD_REQUEST),
+    LASTNAME_REQUIRED(1013, "Last name is required", HttpStatus.BAD_REQUEST),
+    DOB_INVALID(1014, "Date of birth must be in the past", HttpStatus.BAD_REQUEST),
     ;
 
     ErrorCode(int code, String message, HttpStatusCode statusCode) {
