@@ -1,14 +1,33 @@
-const BranchListPage = () => {
+import { Plus } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
+
+const BranchList = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Danh sách chi nhánh</h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">Content for Danh sách chi nhánh page...</p>
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900">Branches</h1>
+          <p className="text-gray-500 mt-2">Manage all hotel branches</p>
         </div>
+        <Link to="/admin/branches/upsert">
+          <Button>
+            <Plus className="mr-2 h-4 w-4" />
+            Add Branch
+          </Button>
+        </Link>
       </div>
+
+      {/* Content */}
+      <Card>
+        <CardContent className="p-6">
+          <p className="text-gray-500 text-center">Branch list will be implemented here</p>
+        </CardContent>
+      </Card>
     </div>
   );
 };
 
-export default BranchListPage;
+export default BranchList;

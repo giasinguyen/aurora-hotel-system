@@ -61,8 +61,6 @@ import StaffDashboardPage from "@/pages/staff/dashboard/StaffDashboard";
 import StaffBookingListPage from "@/pages/staff/bookings/BookingList";
 import StaffBookingUpsertPage from "@/pages/staff/bookings/BookingUpsert";
 import StaffBookingDetailPage from "@/pages/staff/bookings/BookingDetail";
-import CheckInPage from "@/pages/staff/bookings/CheckIn";
-import CheckOutPage from "@/pages/staff/bookings/CheckOut";
 import StaffCustomerUpsertPage from "@/pages/staff/customers/CustomerUpsert";
 import StaffCustomerRequestListPage from "@/pages/staff/requests/CustomerRequestList";
 import StaffLateCheckoutRequestListPage from "@/pages/staff/requests/LateCheckoutRequestList";
@@ -106,6 +104,10 @@ import AdminOverviewReportPage from "@/pages/admin/reports/OverviewReport";
 import AdminRevenueReportPage from "@/pages/admin/reports/RevenueReport";
 import AdminOccupancyReportPage from "@/pages/admin/reports/OccupancyReport";
 import AdminBranchComparisonReportPage from "@/pages/admin/reports/BranchComparisonReport";
+
+// ==================== COMMON PAGES ====================
+import CheckInOutPage from "@/pages/commons/CheckInOut";
+import UserProfilePage from "@/pages/commons/UserProfile";
 
 const router = createBrowserRouter([
   // ==================== GUEST & CUSTOMER ROUTES (Using ClientPage Layout) ====================
@@ -179,8 +181,8 @@ const router = createBrowserRouter([
       { path: "booking", element: <StaffBookingListPage /> },
       { path: "booking/upsert", element: <StaffBookingUpsertPage /> },
       { path: "booking/:id", element: <StaffBookingDetailPage /> },
-      { path: "checkin", element: <CheckInPage /> },
-      { path: "checkout", element: <CheckOutPage /> },
+      { path: "checkinout", element: <CheckInOutPage /> },
+      { path: "profile", element: <UserProfilePage /> },
       { path: "customers/upsert", element: <StaffCustomerUpsertPage /> },
       { path: "customer-requests", element: <StaffCustomerRequestListPage /> },
       {
@@ -224,6 +226,8 @@ const router = createBrowserRouter([
       { path: "news/upsert", element: <ManagerNewsUpsertPage /> },
       { path: "reports/revenue", element: <ManagerRevenueReportPage /> },
       { path: "reports/occupancy", element: <ManagerOccupancyReportPage /> },
+      { path: "checkinout", element: <CheckInOutPage /> },
+      { path: "profile", element: <UserProfilePage /> },
     ],
   },
 
@@ -248,6 +252,8 @@ const router = createBrowserRouter([
         path: "reports/branch-comparison",
         element: <AdminBranchComparisonReportPage />,
       },
+      { path: "checkinout", element: <CheckInOutPage /> },
+      { path: "profile", element: <UserProfilePage /> },
     ],
   },
 
