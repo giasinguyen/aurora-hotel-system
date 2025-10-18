@@ -1,11 +1,22 @@
+import { Outlet } from 'react-router-dom';
+import Sidebar from './Sidebar';
+import Topbar from './Topbar';
+
 const ManagerPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Dashboard - Quản lý</h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">Content for Dashboard - Quản lý page...</p>
-        </div>
+    <div className="flex h-screen overflow-hidden bg-gray-50">
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Main Content */}
+      <div className="flex flex-1 flex-col overflow-hidden">
+        {/* Topbar */}
+        <Topbar />
+
+        {/* Page Content */}
+        <main className="flex-1 overflow-y-auto p-6">
+          <Outlet />
+        </main>
       </div>
     </div>
   );

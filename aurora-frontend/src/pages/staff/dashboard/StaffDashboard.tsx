@@ -1,14 +1,22 @@
-const StaffDashboardPage = () => {
+import { Card, CardContent } from '@/components/ui/card';
+
+const StaffDashboard = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Tổng quan ca làm</h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">Content for Tổng quan ca làm page...</p>
-        </div>
+    <div className="space-y-6">
+      {/* Header */}
+      <div>
+        <h1 className="text-3xl font-bold text-gray-900">Staff Dashboard</h1>
+        <p className="text-gray-500 mt-2">Good morning! Here's your daily overview.</p>
       </div>
+
+      {/* Content */}
+      <Card>
+        <CardContent className="p-6">
+          <p className="text-gray-500 text-center">Dashboard content will be implemented here</p>
+        </CardContent>
+      </Card>
     </div>
   );
 };
 
-export default StaffDashboardPage;
+export default StaffDashboard;
